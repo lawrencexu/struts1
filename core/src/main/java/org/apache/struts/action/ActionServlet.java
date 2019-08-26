@@ -20,6 +20,7 @@ package org.apache.struts.action;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector;
 import org.apache.commons.beanutils.converters.BigDecimalConverter;
 import org.apache.commons.beanutils.converters.BigIntegerConverter;
 import org.apache.commons.beanutils.converters.BooleanConverter;
@@ -1645,6 +1646,10 @@ public class ActionServlet extends HttpServlet {
      */
     protected void initOther()
         throws ServletException {
+        PropertyUtils.addBeanIntrospector(
+                SuppressPropertiesBeanIntrospector.SUPPRESS_CLASS);
+        PropertyUtils.clearDescriptors();
+
         String value;
 
         value = getServletConfig().getInitParameter("config");
