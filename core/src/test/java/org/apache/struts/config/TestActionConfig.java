@@ -307,6 +307,37 @@ public class TestActionConfig extends TestCase {
     }
 
     /**
+     * Test getter of acceptPage property.
+     */
+    public void testGetAcceptPage() {
+        ActionConfig config = new ActionConfig();
+        config.setAcceptPage(new Integer(0));
+        Integer acceptPage = config.getAcceptPage();
+        assertEquals(new Integer(0), acceptPage);
+    }
+
+    /**
+     * Test setter of acceptPage property.
+     */
+    public void testSetAcceptPage() {
+        ActionConfig config = new ActionConfig();
+        config.setAcceptPage(new Integer(0));
+        Integer acceptPage = config.getAcceptPage();
+        assertEquals(new Integer(0), acceptPage);
+    }
+
+    /**
+     * Test a String object representing the value of the ActionConfig object.
+     */
+    public void testToString() {
+        ActionConfig config = new ActionConfig();
+        Integer acceptPage = new Integer(0);
+        config.setAcceptPage(acceptPage);
+        String suffix = "acceptPage=0";
+        assertTrue(config.toString().indexOf(suffix) != -1);
+    }
+
+    /**
      * Used to detect that ActionConfig is making the right calls.
      */
     public static class CustomActionConfig extends ActionConfig {
