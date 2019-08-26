@@ -30,7 +30,6 @@
    </parent>
 
    <modelVersion>4.0.0</modelVersion>
-   <groupId>org.apache.struts</groupId>
    <artifactId>struts-el</artifactId>
    <packaging>jar</packaging>
    <name>Struts EL</name>
@@ -56,39 +55,33 @@
       <dependency>
          <groupId>javax.servlet</groupId>
          <artifactId>jstl</artifactId>
-         <version>1.0.2</version>
       </dependency>
 
       <dependency>
          <groupId>javax.servlet</groupId>
          <artifactId>servlet-api</artifactId>
-         <version>2.3</version>
          <scope>provided</scope>
       </dependency>
 
       <dependency>
          <groupId>org.apache.struts</groupId>
          <artifactId>struts-core</artifactId>
-         <version>${project.version}</version>
       </dependency>
 
       <dependency>
          <groupId>org.apache.struts</groupId>
          <artifactId>struts-taglib</artifactId>
-         <version>${project.version}</version>
       </dependency>
 
       <dependency>
          <groupId>org.apache.struts</groupId>
          <artifactId>struts-tiles</artifactId>
-         <version>${project.version}</version>
          <optional>true</optional>
       </dependency>
 
       <dependency>
          <groupId>taglibs</groupId>
          <artifactId>standard</artifactId>
-         <version>1.0.2</version>
       </dependency>
 
    </dependencies>
