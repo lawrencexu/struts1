@@ -1,3 +1,6 @@
 language: java
+install: true
 jdk:
   - openjdk8
+script:
+  - mvn clean install
