@@ -6,3 +6,5 @@
 /scripting/target/
 /taglib/target/
 /tiles/target/
+*.iml
+/.idea/
