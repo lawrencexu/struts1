@@ -74,6 +74,7 @@ import java.net.URLConnection;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.MissingResourceException;
@@ -1646,8 +1647,13 @@ public class ActionServlet extends HttpServlet {
      */
     protected void initOther()
         throws ServletException {
+        HashSet suppressProperties = new HashSet();
+        suppressProperties.add("class");
+        suppressProperties.add("multipartRequestHandler");
+        suppressProperties.add("resultValueMap");
+
         PropertyUtils.addBeanIntrospector(
-                SuppressPropertiesBeanIntrospector.SUPPRESS_CLASS);
+                new SuppressPropertiesBeanIntrospector(suppressProperties));
         PropertyUtils.clearDescriptors();
 
         String value;
