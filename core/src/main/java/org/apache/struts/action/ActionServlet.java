@@ -20,7 +20,6 @@ package org.apache.struts.action;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.PropertyUtils;
-import org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector;
 import org.apache.commons.beanutils.converters.BigDecimalConverter;
 import org.apache.commons.beanutils.converters.BigIntegerConverter;
 import org.apache.commons.beanutils.converters.BooleanConverter;
@@ -74,7 +73,6 @@ import java.net.URLConnection;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.MissingResourceException;
@@ -1647,13 +1645,6 @@ public class ActionServlet extends HttpServlet {
      */
     protected void initOther()
         throws ServletException {
-        HashSet suppressProperties = new HashSet();
-        suppressProperties.add("multipartRequestHandler");
-        suppressProperties.add("resultValueMap");
-
-        PropertyUtils.addBeanIntrospector(
-                new SuppressPropertiesBeanIntrospector(suppressProperties));
-        PropertyUtils.clearDescriptors();
 
         String value;
 
