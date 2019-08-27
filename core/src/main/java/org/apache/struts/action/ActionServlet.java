@@ -1648,7 +1648,6 @@ public class ActionServlet extends HttpServlet {
     protected void initOther()
         throws ServletException {
         HashSet suppressProperties = new HashSet();
-        suppressProperties.add("class");
         suppressProperties.add("multipartRequestHandler");
         suppressProperties.add("resultValueMap");
 
