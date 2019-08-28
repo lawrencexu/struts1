@@ -172,5 +172,7 @@ public class ViewHandlerImpl extends ViewHandler {
         handler.writeState(context);
     }
 
-
+    public String getWebsocketURL(FacesContext context, String channel) {
+        throw new UnsupportedOperationException();
+    }
 }

@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import java.util.Collection;
 import java.util.Locale;
 
 /**
@@ -168,5 +169,33 @@ public class MockHttpServletResponse implements HttpServletResponse {
 
     public void setLocale(Locale locale) {
         throw new UnsupportedOperationException();
+    }
+
+    public int getStatus() {
+        return 0;
+    }
+
+    public String getHeader(String name) {
+        return null;
+    }
+
+    public Collection<String> getHeaders(String name) {
+        return null;
+    }
+
+    public Collection<String> getHeaderNames() {
+        return null;
+    }
+
+    public String getContentType() {
+        return null;
+    }
+
+    public void setCharacterEncoding(String charset) {
+
+    }
+
+    public void setContentLengthLong(long len) {
+
     }
 }
