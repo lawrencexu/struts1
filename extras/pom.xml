@@ -26,7 +26,7 @@
    <parent>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts-parent</artifactId>
-      <version>1.3.5-lrm-SNAPSHOT</version>
+      <version>1.3.5-lrm</version>
    </parent>
    
    <modelVersion>4.0.0</modelVersion>
